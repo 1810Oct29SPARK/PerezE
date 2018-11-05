@@ -1,0 +1,55 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="ProjectStyle.css" />
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Software</h1>
+            <nav>
+                <ul>
+                    <li><a href="ProjectHome.html">Home</a></li>
+                    <li><a href="ProjectHardware.html">Hardware</a></li>
+                    <li><a href="ProjectSoftware.html">Software</a></li>
+                    <li><a href="ProjectElectrical.html">Electrical</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div>
+            <img id="image1" src="Matlab.png" alt="robot with eyes" width="30%">
+            <div id="main-view">
+                <strong><p>Software setup and logic</p></strong>
+                <p>
+                    The program I used to capture an image and proccess the information was Matlab. It is a matrix-based programing
+                    language that is mainly used by engineers and scientists for its natural expression of computational mathamatics.
+                    Interested in learning more? Want to find out more? Click <a href="https://www.mathworks.com/discovery/what-is-matlab.html"
+                    target="_blank">here</a>.
+                </p>
+                <br>
+                <p>
+                    <ol>
+                        <li>Program starts</li>
+                        <li>Camera takes initial picture and converts to grey scale</li>
+                        <li>Saves picture and waits for user to place items and hit "continue"</li>
+                        <li>Takes second picture and also turns to grey scale</li>
+                        <li>Subtracts the first picture from the second picture, keeps the difference</li>
+                        <li>Calculates how far the screw is by counting pixels</li>
+                        <li>Calculates distance from pixels to cm</li>
+                        <li>Uses inverse kinematics to figure out how and where to move robotic arm</li>
+                        <li>Sends information to arm</li>
+                        <li>Turns on magnet when in place, picking up screw</li>
+                        <li>Moves to where container is</li>
+                        <li>Turns off magnet, dropping screw</li>
+                        <li>Complete!</li>
+                    </ol>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
