@@ -78,6 +78,11 @@ nav a:hover {
     font-weight: bold;
 }
 
-tbody {
-    font-weight: lighter;
+table, th, td{
+    border: 1px solid black;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
 }
