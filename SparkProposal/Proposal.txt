@@ -1,0 +1,9 @@
+Theme: Hotel Website
+Use Cases:
+1. Book a reservation
+2. Write reviews
+3. Food service
+4. Create a account (rewards points)
+5. Check nearby attractioins/restaurants
+6. Event Calendar
+7. Maitnence (something wrong with room or complaint)
