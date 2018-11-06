@@ -16,10 +16,10 @@ window.onload = function(){
                 chosenOperaton = opoerationRadios[i].value;
             } 
         }
+        //call caluclate fucntion with those values and display result
         console.log(num1FromForm);
         console.log(num2FromForm);
         console.log(chosenOperaton);
-        //call caluclate fucntion with those values and display result
         console.log(calculate(num1FromForm,num2FromForm,chosenOperaton));
         document.getElementById("answer").innerHTML=calculate(num1FromForm,num2FromForm,chosenOperaton);
     });
