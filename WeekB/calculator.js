@@ -1,5 +1,9 @@
 //applying an event listener to the Widnow object
 //when the window loads, this function will be executed
+
+//Team: Esteban Perez, Max Couch, Robin Adkins, Uroosa Farooq
+
+
 window.onload = function(){
     console.log("hello world");
     //selecting the element from the DOM with id="calculate"
