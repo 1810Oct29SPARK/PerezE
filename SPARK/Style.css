@@ -4,7 +4,7 @@ header h1 {
     text-align: left;
     font-size: 1.2vw;
     position: absolute;
-    top: 50px;
+    top: 10vh;
     left: 10.5vw;
 }
 
@@ -33,15 +33,15 @@ body {
     min-height: 100vh;
     min-width: 50vw;
     flex-grow: 1;
+    color: black;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
     overflow: hidden;
     width: 70%;
-    position: absolute;
-    left: 15%;
+    position: relative;
+    left: 40%;
 }
 
 /* Style the links inside the navigation bar */
@@ -49,19 +49,38 @@ body {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 95.5px;
+    padding: 0vw 2vh;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1.1vw;
+}
+
+/* Add a black background color to the top navigation */
+.bottomnav {
+    background-color: #333;
+    overflow: hidden;
+    width: 70vw;
+    position: absolute;
+    left: 15vw;
+}
+
+/* Style the links inside the navigation bar */
+.bottomnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 2vh 3.51vw;
+    text-decoration: none;
+    font-size: 1.2vw;
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+.bottomnav a:hover {
     background-color: rgb(95, 171, 241);
     color: black;
 }
 
 /* Add a color to the active/current link */
-.topnav a.active {
+.bottomnav a.active {
     background-color: rgb(37, 51, 179);
     color: white;
 }
@@ -73,25 +92,40 @@ body {
 }
 
 #Logo {
-    width: 10vw;
+    height: 21.9vh;
+}
+
+#Ping {
+    height: 12%;
+}
+
+#Phone {
+    height: 11%;
 }
 
 #Hotel {
     width: 30vw;
-    background: rgb(80, 80, 80);
+    background: rgb(179, 174, 174);
 }
 
 #Location {
     width: 70%;
-    background: rgb(80, 80, 80);
+    background: rgb(179, 174, 174);
     flex-grow: 1;
-    position: absolute;
-    top: 0px;
-    left: 30%;
+    float: right;
+    position: fixed;
+    top: 0vh;
+    left: 30vw;
+    height: 22.5vh;
+}
+
+aside {
+    height: 22.5vh;
+    font-size: 1.2vw;
 }
 
 aside a:link {
-    color: red;
+    color: black;
     text-decoration: none;
 }
 
