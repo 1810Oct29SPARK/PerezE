@@ -1,0 +1,53 @@
+html {
+    font-family: 'Dosis', sans-serif;
+    background: lightgray;
+  }
+  
+  #root {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 1.5rem 2.5rem;
+    background-color: #666;
+    margin: 0 0 2rem 0;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  img {
+    display: block;
+    margin: 1rem auto;
+    max-width: 50%;
+  }
+  
+  p {
+    padding: 0 2.5rem 2.5rem;
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    margin: 10px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .card {
+      flex: 1 1 calc(50% - 2rem);
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    .card {
+      flex: 1 1 calc(33% - 2rem);
+    }
+  }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Advice Generator</title>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+</head>
+<body id="list">
+
+    <header class="advice-panel">
+        <h1>Need some advice?</h1>
+    </header>
+    <form>
+        <fieldset class="advice-panel">
+            <h2>How many advices would you like?</h2>
+            <input type="number" id="num" step="0.01"/>
+        </fieldset>
+        <button type="button" id="advice">Get Advice!</button>
+        <fieldset class="advice-panel">
+            <h3>Answer</h3>
+            <div id="advice-field"></div>
+        </fieldset>
+    </form>
+    <!--<section id="main-content-container" class="advice-panel">
+        <div id="advice-field"></div>-->
+    </section>
+    <script src="API.js"></script>
+</body>
+</html>
