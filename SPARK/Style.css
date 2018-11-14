@@ -266,6 +266,7 @@ div.gallery {
     float: left;
     width: 17%;
     height: 40vh;
+    background-color: rgb(179, 174, 174);
 }
 
 div.gallery:hover {
