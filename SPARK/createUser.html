@@ -3,17 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Attractions</title>
+    <title>Create Account</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Style.css" />
-    <script src="API.js"></script>
-    <style>
-        #map {
-            height: 68vh;
-            width: 100%;
-            top: 7.1vh;
-        }
-    </style>
+    <script src="createAccount.js"></script>
 </head>
 <body>
     <div id="container">
@@ -27,28 +20,24 @@
                     <a href="help.html">Help</a>
                     <a href="login.html">Sign In/Sign Up</a>
                 </nav>
-                <h2>See Whats Near-by</h2>
+                <h2 id="name">Create an Account</h2>
             </aside>      
             <nav class="bottomnav">
                 <a href="MainPage.html">Home</a>
                 <a href="reservation.html">Reservation</a>
                 <a href="dinning.html">Dinning</a>
                 <a href="photos.html">Photo Gallary</a>
-                <a class="active" href="attractions.html">Attractions</a>
+                <a href="attractions.html">Attractions</a>
                 <a href="reviews.html">Reviews</a>
             </nav>
         </header>
-        <div id="map"></div>
-        <script>
-            function initMap(){
-                var location = {lat: 45.434, lng: 12.333};
-                var map = new google.maps.Map(document.getElementById("map"),{
-                    zoom: 16,
-                    center: location
-                });
-            }
-        </script>
-        <script  async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANEa5mU9MtcZfYpH8J7A1C3nf1OCxiXAg&callback=initMap"></script>
+        <div id="text">
+            <h3 id="message">Please enter your Email, username, and password</h3>
+            <input type="text" id="username" placeholder="username" required="true"/>
+            <input type="password" id="password1"placeholder="password" required="true"/><br><br>
+            <input type="password" id="password2"placeholder="enter password again" required="true"/>
+            <button type="button" id="create">Create Account</button>
+        </div>
     </div>
 </body>
 </html>

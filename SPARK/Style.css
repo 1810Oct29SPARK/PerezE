@@ -43,7 +43,7 @@ body {
     overflow: hidden;
     width: 70%;
     position: relative;
-    left: 40%;
+    left: 70%;
 }
 
 /* Style the links inside the navigation bar */
@@ -148,15 +148,6 @@ aside a:hover {
     left: 0;
 }
 
-.res a:link {
-    color: black;
-    text-decoration: none;
-}
-
-.res a:visited {
-    color: currentColor;
-}
-
 .slider {
     overflow: hidden;
 }
@@ -216,7 +207,7 @@ aside a:hover {
 #about {
     position: relative;
     top: 160vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(225, 225, 255, 0.5);
 }
 
 #about h3 {
@@ -231,4 +222,40 @@ aside a:hover {
     color: black;
     font-size: 150%;
     padding-left: 1%;
+}
+
+#user {
+    position: relative;
+    top: 10vh;
+    text-align: center;
+}
+
+#mkAcc {
+    position: relative;
+    top: 3vh;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+#text    {
+    position: relative;
+    top: 10vh;
+    text-align: center;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+#user a:link {
+    color: rgb(0, 110, 255);
+    text-decoration: none;
+}
+
+#user a:visited {
+    color: rgb(0, 110, 255);
+}
+
+#gallary {
+    position: relative;
+    top: 10vh;
+    text-align: center;
 }

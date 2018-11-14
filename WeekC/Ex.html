@@ -1,0 +1,43 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <ul class="languagepicker">
+        <a href="#nl"><li><img src="http://i65.tinypic.com/2d0kyno.png"/>Nederlands</li></a>
+        <a href="#en"><li><img src="http://i64.tinypic.com/fd60km.png"/>English</li></a>
+    </ul>
+    
+    <ul class="languagepicker roundborders">
+        <a href="#nl"><li><img src="http://i65.tinypic.com/2d0kyno.png"/>Nederlands</li></a>
+        <a href="#en"><li><img src="http://i64.tinypic.com/fd60km.png"/>English</li></a>
+    </ul>
+    
+    <ul class="languagepicker roundborders large">
+        <a href="#nl"><li><img src="http://i65.tinypic.com/2d0kyno.png"/>Nederlands</li></a>
+        <a href="#en"><li><img src="http://i64.tinypic.com/fd60km.png"/>English</li></a>
+        <a href="#de"><li><img src="http://i63.tinypic.com/10zmzyb.png"/>German</li></a>
+        <a href="#fr"><li><img src="http://i65.tinypic.com/300b30k.png"/>Français</li></a>
+        <a href="#es"><li><img src="http://i68.tinypic.com/avo5ky.png"/>Español</li></a>
+        <a href="#it"><li><img src="http://i65.tinypic.com/23jl6bn.png"/>Italiano</li></a>
+    </ul>
+    
+    <!-- explanation -->
+    <div style="width:600px;display:inline-block;color:#FFF;">
+        <p>
+            Why do dropdown menus always have to be JavsScript powered? Some CSS will make this simple solution. The only downside is that the height on hover has to be adjusted manually (or by php): the amount of languages multiplied by 40 minus 1.
+        </p>
+    
+        <p>
+            If you have a lot of languages, you may consider using <b><u>overflow: scroll;</u></b><br />
+            Unfortunately, windows has very ugly scrollbars, so you may stiill want to use some JavaScript (jQuery plugin) to have nice and small scrollbars (like the panels of Codepen).
+        </p>
+    </div>
+</body>
+</html>
