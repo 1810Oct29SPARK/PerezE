@@ -43,7 +43,7 @@ document.getElementById('new-joke-button').addEventListener('click',getJokeWithF
 let tampaWeather = {};
 
 //send a GET request to this endpoint to get Tampa weather
-let weatherApiUrl = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID={19ddb23b83acf812800fd1dc5942b128}';
+let weatherApiUrl = 'http://api.openweathermap.org/data/2.5/forecast?lat=27.95&long=-82.46&APPID={19ddb23b83acf812800fd1dc5942b128}';
 
 function getTampaWeather() {
     fetch(weatherApiUrl).then((response) => {return response.json();
