@@ -6,7 +6,7 @@
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Style.css" />
-    <script src="Dynamic.js"></script>
+    <script src="reservation.js"></script>
 </head>
 <body>
     <div id="container">
@@ -17,12 +17,10 @@
             </div>
             <aside id="Location">
                 <nav class="topnav">
-                    <a href="#Language">Language</a>
                     <a href="help.html">Help</a>
                     <a href="login.html">Sign In/Sign Up</a>
                 </nav>
-                <h2>Make a Reservation</h2>
-                <h3>Choose a Date</h3>
+                <h2 id="title">Make a Reservation</h2>
             </aside>    
             <nav class="bottomnav">
                 <a href="MainPage.html">Home</a>
@@ -33,7 +31,14 @@
                 <a href="reviews.html">Reviews</a>
             </nav>
         </header>
-        
+        <img src="book.jpg" id="book" alt="booking banner">
+        <div id="dine">
+            <h3>Please enter the number of people staying and the date.</h3>
+            <input type="number" max="6" min="1" id="num" placeholder="# of people">
+            <input type="date" id="date">
+            <button type="button" id="submit">Submit</button>
+            <h3>If you have a larger party than 6, please call us at 602-710-9583 to make a reservation over the phone.</h3>
+        </div>
     </div>
 </body>
 </html>
