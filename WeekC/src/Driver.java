@@ -1,6 +1,6 @@
 public class Driver {
 	public static void main(String[] args) {
-		System.out.println("This is the point of entry into my programe");
+		System.out.println("This is the point of entry into my program");
 
 		//make a car object with no set fields
 		//declare a variable carOne and assign a new Car to it
@@ -13,5 +13,24 @@ public class Driver {
 		Car carTwo = new Car(1972, "Delorean", "DMC");
 		//check out the toString result
 		System.out.println("carTwo: " +carTwo.toString());
+
+		//try to view instance variables of carTwo
+		// this does NOT compile 	System.out.println("carTwo.model");
+		System.out.println("model of carTwo: " + carTwo.getModel());
+
+		//reset the model of carTwo
+		carTwo.setModel("NotDeLorean");
+		System.out.println("model of carTwo: " + carTwo.getModel());
+
+		//test out carTwo's ingerited move() method
+		carTwo.move();
+
+		//using my tank class
+		Tank bestTank = new Tank(5);
+		System.out.println("Tank has " + bestTank.getNumOfGuns() 
+		+ " guns");
+
+		//show how tank is moving
+		bestTank.move();
 	}
 }
