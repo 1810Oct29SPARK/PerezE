@@ -105,6 +105,10 @@ body {
     height: 11%;
 }
 
+#Email {
+    width: 2%;
+}
+
 #Hotel {
     width: 30vw;
     background: rgb(179, 174, 174);
@@ -119,6 +123,12 @@ body {
     top: 0vh;
     left: 30vw;
     height: 22.5vh;
+}
+
+#temp {
+    position: absolute;
+    top: 8vh;
+    right: 25vw;
 }
 
 aside {
@@ -265,7 +275,7 @@ div.gallery {
     border: 1px solid #ccc;
     float: left;
     width: 17%;
-    height: 40vh;
+    height: 43vh;
     background-color: rgb(179, 174, 174);
 }
 
@@ -324,8 +334,32 @@ div.desc {
     position: relative;
     top: 5vh;
     padding: 1%;
+    font-size: 110%;
 }
 
 .topic {
     text-align: center;
+}
+
+.rev {
+    position: relative;
+    top: 10vh;
+    padding: 1%;
+}
+
+.quest {
+    padding: 1%;
+    padding-bottom: 0%;
+    font-size: 1.5vw;
+}
+
+.ans {
+    padding: 1%;
+    padding-bottom: 0%;
+    font-size: 1.5vw;
+}
+
+#call {
+    padding: 1%;
+    font-size: 1.9vw;
 }
