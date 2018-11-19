@@ -337,6 +337,10 @@ div.desc {
     font-weight: bold;
 }
 
+#userName {
+    font-size: 150%;
+}
+
 .menu {
     position: relative;
     top: 5vh;
