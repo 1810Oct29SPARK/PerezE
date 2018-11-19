@@ -58,7 +58,7 @@ function getTampaWeather() {
 }
 
 function updateWeather() {
-    let newPara = document.createElement('p')
+    let newPara = document.createElement('p');
     newPara.innerText = 'the temperature is: '+tampaWeather.main.temp+' degrees';
     //add new p element as a child of weatherDiv
     document.getElementById('weatherDiv').appendChild(newPara);
