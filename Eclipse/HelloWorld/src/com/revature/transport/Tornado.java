@@ -13,6 +13,15 @@ public class Tornado extends Vehicle {
 	}
 
 	private double maxWindSpeed;
+	private boolean isInSuppercell;
+
+	@Override
+	public void move() throws MaintenanceException{
+		if (!this.isInSuppercell) {
+			throw new MaintenanceException("weather machine incorrectly configured");
+		}
+		System.out.println("DESTROYING THE CITY");
+	}
 
 	public Tornado(double maxWindSpeed) {
 		super();
@@ -26,11 +35,6 @@ public class Tornado extends Vehicle {
 	@Override
 	public String toString() {
 		return "Tornado [maxWindSpeed=" + maxWindSpeed + "]";
-	}
-
-	@Override
-	public void move() {
-		System.out.println("DESTROYING THE CITY");
 	}
 
 }

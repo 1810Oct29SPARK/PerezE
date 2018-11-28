@@ -20,9 +20,14 @@ public class Car extends Vehicle implements Steerable{
 	private String model;
 	private String make;
 	private double milesSinceOilChange;
+	
+	
 
 	@Override
-	public void move() {
+	public void move() throws MaintenanceException {
+		if (this.milesSinceOilChange >= recommendedMiBtwnOilChanges) {
+			throw new MaintenanceException("oil needs to be changed");
+		}
 		System.out.println("car is moving");
 	}
 

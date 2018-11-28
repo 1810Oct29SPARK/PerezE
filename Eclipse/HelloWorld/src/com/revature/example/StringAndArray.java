@@ -2,11 +2,62 @@ package com.revature.example;
 
 import java.util.Arrays;
 
+import com.revature.transport.Car;
+import com.revature.transport.Kayak;
+import com.revature.transport.Tornado;
+import com.revature.transport.Vehicle;
+
 public class StringAndArray {
 
 	public static void main(String[] args) {
-		funWithStrings();
-
+		//funWithStrings();
+		funWithArrays();
+	}
+	
+	static void funWithArrays() {
+		String[] arr1 = {"this", "is", "an", "array"};
+		
+		/*
+		 * augmented (enhanced) for loops - moving through an Array or Iterable
+		 */
+		for (String s : arr1) {
+			System.out.println(s);
+		}
+		
+		String[] arr2 = new String[4];
+		for (int i=0; i<arr2.length; i++) {
+			arr2[i] = "element "+i; 
+		}
+		System.out.println("toString from Array: "+arr2.toString());
+		System.out.println("toString from Arrays: "+Arrays.toString(arr2));
+		
+		int[][] arr3 = new int[4][3];
+		arr3[0][0] = 7;
+		arr3[0][2] = 8;
+		arr3[3][0] = 9;
+		arr3[3][2] = 10;
+		
+		for (int[] a : arr3) {
+			System.out.println(Arrays.toString(a));
+		}
+		
+		Vehicle[] vehicles = new Vehicle[4];
+		System.out.println(Arrays.toString(vehicles)); // all null for now - devault value for all reference types
+		//vehicles[2].move(); //compiles just fine, declared type is Vehicle.. but throws NullPointerException at runtime
+		vehicles[0] = new Tornado(147.2);
+		vehicles[1]  = new Kayak("red", 4.2, 2, 2);
+		vehicles[2] = new Car(2021, "spaceship", "Tesla", 50);
+		vehicles[3] = new Tornado (256.4);
+		
+		/*
+		 * Arrays methods
+		 * sort
+		 * binarySearch
+		 * fill
+		 * copyOfRange
+		 * 
+		 */
+		
 	}
 	
 	static void funWithStrings() {
