@@ -1,8 +1,23 @@
 package com.revature.example;
 
 import java.util.*; 
-public class NewClass 
+public class PriorityQ 
 { 
+	/*
+	 * General description:
+	 * unbound queue based on a priority heap from the smallest element of a specified order by natural order (unicode or 
+	 * value for numbers) or Constructor we have used. The head is the first element in the queue.
+	 * 
+	 * Are they ordered/indexed:
+	 * not indexed but ordered
+	 * 
+	 * Is it sychronized/threadsafe:
+	 * It is not synchronized/threadsafe
+	 * 
+	 * do they allow duplicates/nulls:
+	 * no null pointers/duplicates
+	 */
+	
 	public static void main(String[] args) 
 	{ 
 		// Creating a Priority Queue : 
@@ -14,6 +29,8 @@ public class NewClass
 			geek.add(new Integer (i)); 
 		} 
 
+		geek.add(5);
+		geek.add(420);
 		System.out.println("geek PriorityQueue : " + geek); 
 
 		// Use of comparator() 
