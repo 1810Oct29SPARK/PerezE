@@ -1,23 +1,38 @@
 package work;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Problems {
 
 	public static void main(String[] args) {
-		System.out.println(acronym("Portal Network Graphics"));
+		int[] set = { 4, 6 };
+		System.out.println(getSumOfMultiples(15,set));
 	}
 
-	public static String acronym(String phrase) {
-		char[] acro = new char[phrase.length()];
-		for (int i = 0; i <= acro.length-1; i++) {
-			if (phrase.charAt(i) == ' ' || phrase.charAt(i) == '-') {
-				acro[i]=phrase.charAt(i+1);
+	public static int getSumOfMultiples(int i, int[] set) {
+		List<Integer> vals = new ArrayList<Integer>();
+		List<Integer> newVals = new ArrayList<Integer>();
+		int[] arr = set;
+		int num = arr.length;
+		int ans = 0;
+		for (int j=0; j<i; j++) {
+			System.out.println("in for loop"+j);
+			for (int k=0; k<num; k++) {
+				System.out.println("in second for loop" +k);
+				if (j%arr[k] == 0) {
+					System.out.println(j+"and"+arr[k]);
+					System.out.println("in if loop: div is"+j/arr[k]);
+					vals.add(j);
+				}
 			}
 		}
-		String ans = Arrays.toString(acro);
-		ans = ans.toUpperCase();
+		System.out.println(vals);
+		newVals = vals.stream().distinct().collect(Collectors.toList());
+		for (int n=0; n<newVals.size(); n++) {
+			ans += newVals.get(n);
+		}
 		return ans;
 	}
-
 }
