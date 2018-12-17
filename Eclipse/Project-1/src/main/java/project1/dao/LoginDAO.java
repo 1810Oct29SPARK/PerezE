@@ -1,6 +1,8 @@
 package project1.dao;
 
+import project1.beans.Login;
+
 public interface LoginDAO {
 	//define necessary CRUD methods and build an implementing class in this package
-	public void login(int employeeId, String username, String password);
+	public Login getLoginInfo(int employeeId);
 }
