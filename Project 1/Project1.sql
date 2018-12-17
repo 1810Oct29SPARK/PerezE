@@ -172,3 +172,5 @@ VALUES (3, 'Billy', 'Bob', 'Bdog8@gmail.com');
 UPDATE EMPLOYEE
 SET FIRSTNAME = 'Bobby', LASTNAME = 'McDouglas', EMAIL = 'Jontrich@gmail.com'
 WHERE EMPLOYEE_ID = 13;
+/
+INSERT INTO LOGIN(EMPLOYEE_ID, USERNAME, EMPLOYEE_PASSWORD) VALUES(21, 'Shibelover', '123pass');

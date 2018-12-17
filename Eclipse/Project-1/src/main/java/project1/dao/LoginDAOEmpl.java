@@ -42,4 +42,25 @@ public class LoginDAOEmpl implements LoginDAO {
 		return b;
 	}
 
+	@Override
+	public void addLoginIfno(int employeeId, String username, String employeePassword) {
+		//try-with-resources.. con will be close at the end of the block
+		try(Connection con = ConnectionUtil.getConnection(filename)) {
+			//write a join which unifies Employee, and EmployeeType into a ResultSet
+			//map the ResultSet's entries onto a Employee
+			String sql = "INSERT INTO LOGIN(EMPLOYEE_ID, USERNAME, EMPLOYEE_PASSWORD) VALUES(?, ?, ?)";
+			PreparedStatement pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, employeeId);
+			pstmt.setString(2, username);
+			pstmt.setString(3, employeePassword);
+			pstmt.executeQuery(); //table of the results
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 }
