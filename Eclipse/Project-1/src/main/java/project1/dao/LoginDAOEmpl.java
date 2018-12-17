@@ -15,7 +15,7 @@ public class LoginDAOEmpl implements LoginDAO {
 	private static final String filename = "connection.properties";
 
 	@Override
-	public Login getLoginInfo(int employeeId) {
+	public Login getLoginInfoById(int employeeId) {
 		Login b = null;
 		//try-with-resources.. con will be close at the end of the block
 		try(Connection con = ConnectionUtil.getConnection(filename)) {

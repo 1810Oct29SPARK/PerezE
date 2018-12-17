@@ -20,7 +20,8 @@ public class Driver {
 		//emp.addEmployee(1, "Max", "Jones", "Mjones3@gmail.com");
 		//emp.updateEmployee(10, "Max", "Couch", "food@gmail.com");
 		//emp.removeEmployee(14);
-		System.out.println(log.getLoginInfo(3));
+		//System.out.println(log.getLoginInfoById(3));
+		
 //		List<Employee> employees = emp.getEmployees();
 //		for (Employee e : employees) {
 //			System.out.println(e);
