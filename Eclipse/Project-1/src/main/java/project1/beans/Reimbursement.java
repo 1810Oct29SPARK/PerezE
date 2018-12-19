@@ -3,7 +3,7 @@ package project1.beans;
 public class Reimbursement {
 	
 	public Reimbursement(int reimbursementId, int employeeId, String reimCategory, Double amount, String status,
-			String approvedBy, String dateApproved) {
+			String approvedBy, String dateSubmitted) {
 		super();
 		this.reimbursementId = reimbursementId;
 		this.employeeId = employeeId;
@@ -11,7 +11,7 @@ public class Reimbursement {
 		this.amount = amount;
 		this.status = status;
 		this.approvedBy = approvedBy;
-		this.dateApproved = dateApproved;
+		this.dateSubmitted = dateSubmitted;
 	}
 	private int reimbursementId;
 	private int employeeId;
@@ -19,7 +19,7 @@ public class Reimbursement {
 	private Double amount;
 	private String status;
 	private String approvedBy;
-	private String dateApproved;
+	private String dateSubmitted;
 	public int getReimbursementId() {
 		return reimbursementId;
 	}
@@ -56,17 +56,17 @@ public class Reimbursement {
 	public void setApprovedBy(String approvedBy) {
 		this.approvedBy = approvedBy;
 	}
-	public String getDateApproved() {
-		return dateApproved;
+	public String getDateSubmitted() {
+		return dateSubmitted;
 	}
-	public void setDateApproved(String dateApproved) {
-		this.dateApproved = dateApproved;
+	public void setDateSubmitted(String dateSubmitted) {
+		this.dateSubmitted = dateSubmitted;
 	}
 	@Override
 	public String toString() {
 		return "Reimbursement [reimbursementId=" + reimbursementId + ", employeeId=" + employeeId + ", reimCategory="
 				+ reimCategory + ", amount=" + amount + ", status=" + status + ", approvedBy=" + approvedBy
-				+ ", dateApproved=" + dateApproved + "]";
+				+ ", dateSubmitted=" + dateSubmitted + "]";
 	}
 
 }
