@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-  <javaee:display-name>ServletDemo</javaee:display-name>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>ServletDemo</display-name>
+  <!-- adds param to servletContext -->
+  <context-param>
+  	<param-name>applicationMessage</param-name>
+  	<param-value>Hello_From_ServletDemo</param-value>
+  </context-param>
   <servlet>
     <servlet-name>HelloWorld</servlet-name>
     <servlet-class>com.revature.servlet.HelloWorldServlet</servlet-class>
+    <!-- add param to servletConfig -->
+    <init-param>
+    	<param-name>servletMessage</param-name>
+    	<param-value>Hello_From_Hello_World</param-value>
+    </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>HelloWorld</servlet-name>
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
   <servlet>
-    <javaee:description></javaee:description>
-    <javaee:display-name>BearServlet</javaee:display-name>
+    <description></description>
+    <display-name>BearServlet</display-name>
     <servlet-name>BearServlet</servlet-name>
     <servlet-class>com.revature.servlet.BearServlet</servlet-class>
+    <!-- add param to servletConfig -->
+    <init-param>
+    	<param-name>servletMessage</param-name>
+    	<param-value>Hello_From_Hello_World</param-value>
+    </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>BearServlet</servlet-name>
@@ -21,10 +36,20 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>CalculatorServlet</servlet-name>
-    <servlet-class>com.revature.servlet.Calculator</servlet-class>
+    <servlet-class>com.revature.servlet.CalculatorServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CalculatorServlet</servlet-name>
     <url-pattern>/calculator</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ResultServlet</display-name>
+    <servlet-name>ResultServlet</servlet-name>
+    <servlet-class>com.revature.servlet.ResultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResultServlet</servlet-name>
+    <url-pattern>/result</url-pattern>
   </servlet-mapping>
 </web-app>
