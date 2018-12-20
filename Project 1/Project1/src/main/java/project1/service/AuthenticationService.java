@@ -21,7 +21,6 @@ public class AuthenticationService {
 				u = new User(5,username,"Merlin","Cat","wizcat@tampa.com");
 			}
 		}
-		System.out.println(u);
 		return u;
 	}
 	
