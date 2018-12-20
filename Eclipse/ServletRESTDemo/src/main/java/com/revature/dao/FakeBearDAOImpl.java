@@ -15,25 +15,24 @@ public class FakeBearDAOImpl implements BearDAO{
 	
 	public FakeBearDAOImpl() {
 		Cave c1 = new Cave(3, "Tampa", 5);
-		BearType bt = new BearType(7, "Grizzly");
-		BearType bt2 = new BearType(9, "Polar");
+		BearType bt = new BearType(7,"Grizzly");
+		BearType bt2  = new BearType(9,"Polar");
 		myBears.add(new Bear(5, "Susan", c1, bt2, 600, LocalDate.now()));
 		myBears.add(new Bear(81, "Bob", c1, bt, 650, LocalDate.now()));
 	}
 
 	public List<Bear> allBears() {
-		// TODO Auto-generated method stub
-		return null;
+		return myBears;
 	}
 
 	public Bear getBearById(int id) {
 		Bear toReturn = null;
 		for (Bear b : myBears) {
 			if (b.getId() == id) {
-				toReturn = b;
+				toReturn  = b;
 			}
 		}
-		return null;
+		return toReturn;
 	}
 
 	public void createBear(Bear bear) {
@@ -55,9 +54,9 @@ public class FakeBearDAOImpl implements BearDAO{
 	}
 
 	public void deleteBear(Bear bear) {
-		//use iterator to remove in-place
+		//use iterator to remove in-place!!! 
 		Iterator<Bear> it = myBears.iterator();
-		while(it.hasNext()) {
+		while(it.hasNext()){
 			Bear b = it.next();
 			if (b.getId() == bear.getId()) {
 				it.remove();
