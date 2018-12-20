@@ -13,7 +13,7 @@ import project1.model.Credentials;
 import project1.model.User;
 import project1.service.AuthenticationService;
 
-@WebServlet("/Employee Login")
+@WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	
 	AuthenticationService authService = new AuthenticationService();
@@ -47,9 +47,10 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("email", u.getEmail());
 			session.setAttribute("problem", null);
 			//redirect user to profile page if authenticated
-			resp.sendRedirect("profile");
+			resp.sendRedirect("employeePage");
 		} else {
 			session.setAttribute("problem", "invalid credentials");
+			System.out.println("in else");
 			//redirect user to login page if authentication fails
 			resp.sendRedirect("login");
 		}
