@@ -63,23 +63,4 @@ public class LoginDAOEmpl implements LoginDAO {
 		}
 	}
 
-	@Override
-	public void removeLoginInfo(int employeeId) {
-		//try-with-resources.. con will be close at the end of the block
-		try(Connection con = ConnectionUtil.getConnection(filename)) {
-			//write a join which unifies Employee, and EmployeeType into a ResultSet
-			//map the ResultSet's entries onto a Employee
-			String sql = "DELETE FROM LOGIN WHERE EMPLOYEE_ID = ?";
-			PreparedStatement pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, employeeId);
-			pstmt.executeQuery(); //table of the results
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
 }
