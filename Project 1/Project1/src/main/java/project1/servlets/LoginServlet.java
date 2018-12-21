@@ -45,7 +45,6 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("firstname", u.getFirstName());
 			session.setAttribute("lastname", u.getLastName());
 			session.setAttribute("email", u.getEmail());
-			System.out.println(session.getAttribute("email"));
 			switch (u.getEmployeeTypeId()) {
 			case 1:
 				//redirect user to employee page if authenticated

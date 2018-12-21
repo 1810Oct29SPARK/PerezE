@@ -16,7 +16,7 @@ public class LoginDAOEmpl implements LoginDAO {
 
 	@Override
 	public Login getLoginInfoByUsername(String username) {
-		Login b = null;
+		Login b = new Login(0, 0, null, null);
 		//try-with-resources.. con will be close at the end of the block
 		try(Connection con = ConnectionUtil.getConnection(filename)) {
 			//write a join which unifies Employee, and EmployeeType into a ResultSet

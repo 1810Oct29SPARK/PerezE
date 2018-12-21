@@ -20,10 +20,10 @@ function populateUser() {
 		} else {
 			//define behavior for user returned
 			user = data;
-			document.getElementById("id").innerText = "Employee Id: "+user.employeeId;
 			document.getElementById("firstname").innerText = "First name: "+user.firstName;
 			document.getElementById("lastname").innerText = "Last name: "+user.lastName;
 			document.getElementById("email").innerText = "Email: "+user.email;
+			document.getElementById("employees").innerText = "Employees you manage: "+user.email;
 		}
 	});
 }

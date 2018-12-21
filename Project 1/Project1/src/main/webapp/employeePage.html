@@ -42,8 +42,8 @@
                     <a class="nav-link" href="login">Employee Login</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" method="get">
-                <button class="btn btn-outline-dark my-2 my-sm-0" type="logout">Logout</button>
+            <form class="form-inline my-2 my-lg-0" method="get" action="logout">
+                <a href="home"><input class="btn btn-outline-dark my-2 my-sm-0" type="submit" value="logout"></a>
             </form>
         </div>
     </nav>
@@ -61,8 +61,6 @@
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
       <h3>Info</h3>
-      <p id="id"></p>
-      <br>
       <p id="firstname"></p>
       <br>
       <p id="lastname"></p>
