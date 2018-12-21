@@ -37,7 +37,9 @@ public class LoginServlet extends HttpServlet {
 		//grab params from request 
 		Credentials cred = new Credentials(req.getParameter("username"),req.getParameter("password"));
 		//attempt to authenticate the user
+		System.out.println("before user thing"+cred);
 		User u = authService.isValidUser(cred);
+		System.out.println("after user thing");
 		//set user information as session attributes
 		if (u != null) {
 			session.setAttribute("userId", u.getId());

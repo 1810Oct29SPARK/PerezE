@@ -17,15 +17,18 @@ public class EmployeeDAOEmpl implements EmployeeDAO {
 	private static final String filename = "connection.properties";
 
 	@Override
-	public Employee getEmployeeById(int employeeId) {
+	public Employee getEmployeeByUsername(String username) {
 		Employee b = null;
 		//try-with-resources.. con will be close at the end of the block
 		try(Connection con = ConnectionUtil.getConnection(filename)) {
 			//write a join which unifies Employee, and EmployeeType into a ResultSet
 			//map the ResultSet's entries onto a Employee
-			String sql = "SELECT * FROM EMPLOYEE WHERE EMPLOYEE_ID = ?";
+			String sql = "SELECT * " + 
+					"FROM EMPLOYEE E " + 
+					"FULL JOIN LOGIN ON E.EMPLOYEE_ID = LOGIN.EMPLOYEE_ID " + 
+					"WHERE USERNAME = ?";
 			PreparedStatement pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, employeeId);
+			pstmt.setString(1, username);
 			ResultSet rs = pstmt.executeQuery(); //table of the results
 			while(rs.next()) {
 				int empId = rs.getInt("EMPLOYEE_ID");

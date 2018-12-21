@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import project1.beans.Employee;
+import project1.beans.Login;
 import project1.dao.EmployeeDAO;
 import project1.dao.EmployeeDAOEmpl;
 import project1.dao.LoginDAO;
@@ -19,7 +21,9 @@ public class Driver {
 		EmployeeDAO emp = new EmployeeDAOEmpl();
 		LoginDAO log = new LoginDAOEmpl();
 		ReimbursementDAO reim = new ReimbursementDAOEmpl();
-		//System.out.println(emp.getEmployeeById(12));
+		//System.out.println(emp.getEmployeeByUsername("John"));
+		Login val = log.getLoginInfoByUsername("John");
+		System.out.println(val.getUsername());
 		//emp.addEmployee(1, "Max", "Jones", "Mjones3@gmail.com");
 		//emp.updateEmployee(10, "Max", "Couch", "food@gmail.com");
 		//emp.removeEmployee(14);

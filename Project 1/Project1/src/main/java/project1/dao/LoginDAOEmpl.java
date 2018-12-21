@@ -15,22 +15,22 @@ public class LoginDAOEmpl implements LoginDAO {
 	private static final String filename = "connection.properties";
 
 	@Override
-	public Login getLoginInfoById(int employeeId) {
+	public Login getLoginInfoByUsername(String username) {
 		Login b = null;
 		//try-with-resources.. con will be close at the end of the block
 		try(Connection con = ConnectionUtil.getConnection(filename)) {
 			//write a join which unifies Employee, and EmployeeType into a ResultSet
 			//map the ResultSet's entries onto a Employee
-			String sql = "SELECT * FROM LOGIN WHERE EMPLOYEE_ID = ?";
+			String sql = "SELECT * FROM LOGIN WHERE USERNAME = ?";
 			PreparedStatement pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, employeeId);
+			pstmt.setString(1, username);
 			ResultSet rs = pstmt.executeQuery(); //table of the results
 			while(rs.next()) {
 				int loginId = rs.getInt("LOGIN_ID");
 				int empId = rs.getInt("EMPLOYEE_ID");
-				String username = rs.getString("USERNAME");
+				String name = rs.getString("USERNAME");
 				String empPass = rs.getString("EMPLOYEE_PASSWORD");
-				b = new Login(loginId, empId, username, empPass);
+				b = new Login(loginId, empId, name, empPass);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
