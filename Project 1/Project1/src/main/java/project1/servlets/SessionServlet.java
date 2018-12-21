@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import project1.model.User;
+import project1.beans.Employee;
 
 @WebServlet("/session")
 public class SessionServlet extends HttpServlet {
@@ -22,14 +22,14 @@ public class SessionServlet extends HttpServlet {
 		// grab current session, if it exists
 		response.setContentType("application/json");
 		HttpSession session = request.getSession(false);
-		if (session != null && session.getAttribute("username") != null) {
+		if (session != null && session.getAttribute("email") != null) {
 			try {
 				int userId = Integer.parseInt(session.getAttribute("userId").toString());
-				String username = session.getAttribute("username").toString();
+				int userType = Integer.parseInt(session.getAttribute("employeeType").toString());
 				String firstname = session.getAttribute("firstname").toString();
 				String lastname = session.getAttribute("lastname").toString();
 				String email = session.getAttribute("email").toString();
-				User u = new User(userId, username, firstname, lastname, email);
+				Employee u = new Employee(userId, userType, firstname, lastname, email);
 				response.getWriter().write((new ObjectMapper()).writeValueAsString(u));
 			} catch (Exception e) {
 				e.printStackTrace();

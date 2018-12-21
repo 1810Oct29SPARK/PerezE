@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import project1.beans.Employee;
 import project1.model.Credentials;
-import project1.model.User;
 import project1.service.AuthenticationService;
 
 @WebServlet("/login")
@@ -37,22 +37,28 @@ public class LoginServlet extends HttpServlet {
 		//grab params from request 
 		Credentials cred = new Credentials(req.getParameter("username"),req.getParameter("password"));
 		//attempt to authenticate the user
-		System.out.println("before user thing"+cred);
-		User u = authService.isValidUser(cred);
-		System.out.println("after user thing");
+		Employee u = authService.isValidUser(cred);
 		//set user information as session attributes
 		if (u != null) {
-			session.setAttribute("userId", u.getId());
-			session.setAttribute("username", u.getUsername());
-			session.setAttribute("firstname", u.getFirstname());
-			session.setAttribute("lastname", u.getLastname());
+			session.setAttribute("userId", u.getEmployeeId());
+			session.setAttribute("employeeType", u.getEmployeeTypeId());
+			session.setAttribute("firstname", u.getFirstName());
+			session.setAttribute("lastname", u.getLastName());
 			session.setAttribute("email", u.getEmail());
-			session.setAttribute("problem", null);
-			//redirect user to profile page if authenticated
-			resp.sendRedirect("employeePage");
+			System.out.println(session.getAttribute("email"));
+			switch (u.getEmployeeTypeId()) {
+			case 1:
+				//redirect user to employee page if authenticated
+				resp.sendRedirect("employeePage");
+				break;
+				
+			default:
+				//redirect user to manager page if authenticated
+				resp.sendRedirect("managerPage");
+				break;
+			}
 		} else {
 			session.setAttribute("problem", "invalid credentials");
-			System.out.println("in else");
 			//redirect user to login page if authentication fails
 			resp.sendRedirect("login");
 		}
