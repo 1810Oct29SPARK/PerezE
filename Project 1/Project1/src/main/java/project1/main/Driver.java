@@ -3,6 +3,8 @@ package project1.main;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import project1.beans.Employee;
 import project1.beans.Login;
@@ -23,7 +25,7 @@ public class Driver {
 		ReimbursementDAO reim = new ReimbursementDAOEmpl();
 		//System.out.println(emp.getEmployeeByUsername("John"));
 		Login val = log.getLoginInfoByUsername("John");
-		System.out.println(val.getUsername());
+		//System.out.println(val.getUsername());
 		//emp.addEmployee(1, "Max", "Jones", "Mjones3@gmail.com");
 		//emp.updateEmployee(10, "Max", "Couch", "food@gmail.com");
 		//emp.removeEmployee(14);
@@ -33,10 +35,16 @@ public class Driver {
 //		for (Reimbursement r : reimbursement) {
 //			System.out.println(r);
 //		}
-//		List<Employee> employees = emp.getEmployees();
-//		for (Employee e : employees) {
-//			System.out.println(e);
-//		}
+		
+		List<Employee> employees = emp.getEmployees();
+		List<Employee> list = new ArrayList<>();
+		int i = 0;
+		for (Employee e : employees) {
+			//System.out.println(e);
+			list.add(e);
+		}
+		System.out.println(list.get(5));
+		System.out.println(list.size());
 	}
 	
 	static void init() {
