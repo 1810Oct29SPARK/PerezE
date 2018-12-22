@@ -44,7 +44,7 @@ function populateEmps() {
 			emps = data;
 			var i;
 			for (i = 0; i < emps.length; i++) { 
-			  listEmps += emps[i] + "<br>";
+			  listEmps += JSON.stringify(emps[i]) + "<br>";
 			}
 			document.getElementById("list").innerHTML = listEmps;
 		}
