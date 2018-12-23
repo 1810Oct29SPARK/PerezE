@@ -28,13 +28,14 @@ public class Driver {
 		ReimbursementDAO reim = new ReimbursementDAOEmpl();
 		//System.out.println(emp.getEmployeeByUsername("John"));
 		//Login val = log.getLoginInfoByUsername("John");
-		System.out.println(reim.listReimbursements(2));
+		//System.out.println(reim.listReimbursements(2));
 		//System.out.println(val.getUsername());
 		//emp.addEmployee(1, "Max", "Jones", "Mjones3@gmail.com");
 		//emp.updateEmployee(10, "Max", "Couch", "food@gmail.com");
 		//emp.removeEmployee(14);
 		//System.out.println(log.getLoginInfoById(3));
 		//System.out.println(reim.getReimbursementById(6));
+		reim.updateReimbursement(7, "approved", "Mary");
 //		List<Reimbursement> reimbursement = reim.getReimbursement();
 //		for (Reimbursement r : reimbursement) {
 //			System.out.println(r);
@@ -50,11 +51,11 @@ public class Driver {
 //		System.out.println(list.get(5));
 //		System.out.println(list.size());
 
-	    Date dt = new Date();
-	    String strDateFormat = "dd-MM-YY";
-	    DateFormat dateFormat = new SimpleDateFormat(strDateFormat);
-	    String formattedDate= dateFormat.format(dt);
-	    System.out.println(formattedDate);
+//	    Date dt = new Date();
+//	    String strDateFormat = "dd-MM-YY";
+//	    DateFormat dateFormat = new SimpleDateFormat(strDateFormat);
+//	    String formattedDate= dateFormat.format(dt);
+//	    System.out.println(formattedDate);
 	}
 	
 	static void init() {

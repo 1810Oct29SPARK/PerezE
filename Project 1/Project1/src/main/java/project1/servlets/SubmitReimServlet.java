@@ -24,7 +24,7 @@ public class SubmitReimServlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
-		request.getRequestDispatcher("home.html").include(request, response);
+		request.getRequestDispatcher("managerPage.html").include(request, response);
 		String id = request.getParameter("id");
 		String category = request.getParameter("category");
 		String amount = request.getParameter("amount");
