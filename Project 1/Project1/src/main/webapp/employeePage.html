@@ -69,7 +69,47 @@
     </div>
     <div id="menu1" class="tab-pane fade">
       <h3>Reimbursement</h3>
-      <p id="subitReim">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <form>
+  <div class="row">
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">#</div>
+        </div>
+        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Employee Id">
+      </div>
+    </div>
+    <div class="col-sm-2 my-1">
+      <select id="inputState" class="form-control">
+        <option selected>Choose Category...</option>
+        <option>Brass</option>
+        <option>String</option>
+        <option>Wood winds</option>
+        <option>Percussions</option>
+        <option>String</option>
+        <option>Office Supplies</option>
+      </select>
+    </div>
+    <div class="col-sm-2 my-1">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">$</div>
+        </div>
+        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Amount">
+      </div>
+    </div>
+  <div class="col-sm-3 my-1">
+    <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+    <div class="invalid-feedback">Example invalid custom file feedback</div>
+  </div>
+  <div class="col-sm-2 my-1">
+    <form class="form-inline my-2 my-lg-0" method="get" action="submitReim">
+        <a href="home"><input class="btn btn-outline-dark my-2 my-sm-0" type="submit" value="Submit"></a>
+    </form>
+    </div>
+  </div>
+</form>
     </div>
   </div>
 </div>
