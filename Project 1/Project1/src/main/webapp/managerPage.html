@@ -70,18 +70,18 @@
     </div>
     <div id="menu1" class="tab-pane fade">
       <h3>Reimbursement</h3>
-      <form>
+      <form method="post" action="submitReim">
   <div class="row">
     <div class="col-sm-2 my-1">
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">#</div>
         </div>
-        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Employee Id">
+        <input type="text" class="form-control" name="id" placeholder="Employee Id">
       </div>
     </div>
     <div class="col-sm-2 my-1">
-      <select id="inputState" class="form-control">
+      <select name="category" class="form-control">
         <option selected>Choose Category...</option>
         <option>Brass</option>
         <option>String</option>
@@ -96,17 +96,17 @@
         <div class="input-group-prepend">
           <div class="input-group-text">$</div>
         </div>
-        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Amount">
+        <input type="text" class="form-control" name="amount" placeholder="Amount">
       </div>
     </div>
   <div class="col-sm-3 my-1">
-    <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+    <input type="file" class="custom-file-input" name="file">
     <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
     <div class="invalid-feedback">Example invalid custom file feedback</div>
   </div>
   <div class="col-sm-2 my-1">
-    <form class="form-inline my-2 my-lg-0" method="get" action="submitReim">
-        <a href="home"><input class="btn btn-outline-dark my-2 my-sm-0" type="submit" value="Submit"></a>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="btn btn-outline-dark my-2 my-sm-0" type="submit" value="Submit">
     </form>
     </div>
   </div>

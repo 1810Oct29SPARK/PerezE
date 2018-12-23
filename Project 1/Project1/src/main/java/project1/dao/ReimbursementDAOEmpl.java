@@ -56,7 +56,7 @@ public class ReimbursementDAOEmpl implements ReimbursementDAO{
 			//write a join which unifies Employee, and EmployeeType into a ResultSet
 			//map the ResultSet's entries onto a Employee
 			String sql = "INSERT INTO REIMBURSEMENT(EMPLOYEE_ID, REIMBURSEMENT_CATEGORY, AMOUNT, STATUS, APPROVED_BY, DATE_SUBMITTED) "
-					+"VALUE(?,?,?,?,?,?)";
+					+"VALUES(?,?,?,?,?,?)";
 			PreparedStatement pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, employeeId);
 			pstmt.setString(2, category);

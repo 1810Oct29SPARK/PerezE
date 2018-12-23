@@ -8,12 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import project1.model.Reim;
 import project1.service.ReimbursementService;
 
 @WebServlet("/submitReim")
 public class SubmitReimServlet extends HttpServlet{
 	
-	ReimbursementService reim = new ReimbursementService();
+	ReimbursementService reimb = new ReimbursementService();
 	
 	/**
 	 * 
@@ -24,7 +25,17 @@ public class SubmitReimServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		request.getRequestDispatcher("home.html").include(request, response);
-		String id = request.getParameter("stuf");
+		String id = request.getParameter("id");
+		String category = request.getParameter("category");
+		String amount = request.getParameter("amount");
+		reimb.subReim(Integer.parseInt(id), category, Double.parseDouble(amount));
+		
+
+//		private int empId;
+//		private String riemCat;
+//		private Double amount;
+//		private String status;
+//		private String submittedBy;
 	}
 	
 	@Override

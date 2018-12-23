@@ -3,7 +3,10 @@ package project1.main;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import project1.beans.Employee;
@@ -36,15 +39,21 @@ public class Driver {
 //			System.out.println(r);
 //		}
 		
-		List<Employee> employees = emp.getEmployees();
-		List<Employee> list = new ArrayList<>();
-		int i = 0;
-		for (Employee e : employees) {
-			//System.out.println(e);
-			list.add(e);
-		}
-		System.out.println(list.get(5));
-		System.out.println(list.size());
+//		List<Employee> employees = emp.getEmployees();
+//		List<Employee> list = new ArrayList<>();
+//		int i = 0;
+//		for (Employee e : employees) {
+//			//System.out.println(e);
+//			list.add(e);
+//		}
+//		System.out.println(list.get(5));
+//		System.out.println(list.size());
+
+	    Date dt = new Date();
+	    String strDateFormat = "dd-MM-YY";
+	    DateFormat dateFormat = new SimpleDateFormat(strDateFormat);
+	    String formattedDate= dateFormat.format(dt);
+	    System.out.println(formattedDate);
 	}
 	
 	static void init() {
