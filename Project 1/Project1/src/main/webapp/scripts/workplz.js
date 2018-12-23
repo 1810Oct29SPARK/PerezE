@@ -5,8 +5,8 @@ let user = {};
 
 window.onload = function() {
 	populateUser();
-	//populateEmps();
-	//populateReim();
+	populateEmps();
+	populateReim();
 }
 
 function populateUser() {

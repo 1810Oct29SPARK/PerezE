@@ -27,7 +27,8 @@ public class Driver {
 		LoginDAO log = new LoginDAOEmpl();
 		ReimbursementDAO reim = new ReimbursementDAOEmpl();
 		//System.out.println(emp.getEmployeeByUsername("John"));
-		Login val = log.getLoginInfoByUsername("John");
+		//Login val = log.getLoginInfoByUsername("John");
+		System.out.println(reim.listReimbursements(2));
 		//System.out.println(val.getUsername());
 		//emp.addEmployee(1, "Max", "Jones", "Mjones3@gmail.com");
 		//emp.updateEmployee(10, "Max", "Couch", "food@gmail.com");

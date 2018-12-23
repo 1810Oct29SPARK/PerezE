@@ -29,13 +29,6 @@ public class SubmitReimServlet extends HttpServlet{
 		String category = request.getParameter("category");
 		String amount = request.getParameter("amount");
 		reimb.subReim(Integer.parseInt(id), category, Double.parseDouble(amount));
-		
-
-//		private int empId;
-//		private String riemCat;
-//		private Double amount;
-//		private String status;
-//		private String submittedBy;
 	}
 	
 	@Override
