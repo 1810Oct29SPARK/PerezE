@@ -44,10 +44,17 @@ function populateEmps() {
 			var listEmps = "";
 			emps = data;
 			var i;
+			fetch("http://localhost:7001/Project1/session").then(function(response) {
+				return response.json();
+			}).then(function(data) {
+				beans = data;
 			for (i = 0; i < emps.length; i++) { 
-			  listEmps += JSON.stringify(emps[i]) + "<br>";
+				if (beans.employeeTypeId > emps[i].employeeTypeId) {
+					document.getElementById("list").innerHTML = listEmps;
+					listEmps += JSON.stringify(emps[i]) + "<br>";
+				}
 			}
-			document.getElementById("list").innerHTML = listEmps;
+			})
 		}
 	});
 }
@@ -68,9 +75,12 @@ function populateReim() {
 			thing = data;
 			var i;
 			for (i = 0; i < thing.length; i++) { 
-			  listReim += JSON.stringify(thing[i]) + "<br>";
+				listReim += JSON.stringify(thing[i]);
+				var para = document.createElement('p');
+				var t = document.createTextNode(listReim);
+				para.appendChild(t);
 			}
-			document.getElementById("reim").innerHTML = listReim;
+			document.getElementById("reim").appendChild(para);
 		}
 	});
 }
